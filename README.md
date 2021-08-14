@@ -30,6 +30,7 @@ Personal project developed with the Android SDK. All recipe information is provi
 * [**Lottie**](https://github.com/airbnb/lottie-android)
 * [**Jsoup**](https://jsoup.org/)
 * [**Retrofit**](https://square.github.io/retrofit/)
+* [**Shimmer**](http://facebook.github.io/shimmer-android/) 
 
 
 ## Screenshots:
