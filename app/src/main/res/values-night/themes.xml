@@ -1,0 +1,99 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.FoodRecipe" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/colorPrimaryDark</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/colorStatusBar</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <item name="colorControlNormal">@color/colorTextSecondary</item>
+        <item name="colorControlActivated">@color/colorTextPrimary</item>
+        <item name="actionOverflowMenuStyle">@style/OverflowMenu</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeBackground">@color/colorSearchView</item>
+        <item name="tabStyle">@style/CustomTabLayout</item>
+
+    </style>
+
+    <!-- Bottom Navigation Custom Style-->
+    <style name="BottomNavigationStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="backgroundTint">@color/colorBottomNavBacground</item>
+        <item name="itemIconTint">@color/bottom_nav_color</item>
+        <item name="itemTextColor">@color/bottom_nav_color</item>
+    </style>
+
+    <style name="BottomNavigationTextStyle" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/circular_medium</item>
+    </style>
+
+    <!-- Tablayout Custom Style -->
+    <style name="TabLayoutTextAppeareance" parent="TextAppearance.Design.Tab">
+        <item name="fontFamily">@font/circular_medium</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="CustomTabLayout" parent="Widget.MaterialComponents.TabLayout">
+        <item name="tabIndicatorColor">@color/colorTextPrimary</item>
+        <item name="tabTextAppearance">@style/TabLayoutTextAppeareance</item>
+        <item name="tabBackground">@color/colorBackground</item>
+        <item name="tabIndicator">@drawable/tablayout_indicator</item>
+        <item name="tabSelectedTextColor">@color/colorTextPrimary</item>
+        <item name="tabTextColor">@color/colorTextSecondary</item>
+    </style>
+
+    <!-- Shapeable Image View Style -->
+    <style name="ShapeableImageViewStyle" parent="Widget.MaterialComponents.ShapeableImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <!-- Toolbar style -->
+    <style name="ToolbarTitleStyle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="fontFamily">@font/circular_medium</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <!--TextInput Layout style-->
+
+    <style name="TextInputLayoutTextStyle">
+        <item name="fontFamily">@font/circular_medium</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/text_input_layout_color</item>
+        <item name="boxCornerRadiusTopStart">16dp</item>
+        <item name="boxCornerRadiusTopEnd">16dp</item>
+        <item name="boxCornerRadiusBottomEnd">16dp</item>
+        <item name="boxCornerRadiusBottomStart">16dp</item>
+        <item name="android:textColorHint">@color/colorTextSecondary</item>
+        <item name="endIconMode">clear_text</item>
+        <item name="endIconTint">@color/colorTextSecondary</item>
+        <item name="hintTextColor">@color/colorTextSecondary</item>
+    </style>
+
+    <!-- Overflow menu style -->
+    <style name="OverflowMenu" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <item name="android:windowDisablePreview">true</item>
+        <item name="overlapAnchor">false</item>
+        <item name="android:dropDownVerticalOffset">5.0dp</item>
+        <item name="android:popupBackground">@color/colorBackground</item>
+    </style>
+
+    <!-- Chip style -->
+    <style name="MyChipStyle" parent="Widget.MaterialComponents.Chip.Filter">
+        <item name="chipBackgroundColor">@color/chip_background_color</item>
+        <item name="android:textColor">@color/chip_text_color</item>
+        <item name="checkedIconTint">@color/chip_text_color</item>
+
+        <item name="ensureMinTouchTargetSize">false</item>
+        <item name="checkedIconEnabled">false</item>
+        <item name="checkedIcon">@null</item>
+    </style>
+
+</resources>

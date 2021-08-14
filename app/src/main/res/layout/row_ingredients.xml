@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="ingredient"
+            type="com.example.foodrecipes.models.ExtendedIngredient" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground"
+        android:padding="12dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ingredient_image"
+            loadIngredientImage="@{ingredient.image}"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:forceDarkAllowed="false"
+            android:background="@color/colorIngredientBackground"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:shapeAppearance="@style/ShapeableImageViewStyle"
+            tools:src="@drawable/ic_vegetarian" />
+
+        <TextView
+            android:id="@+id/ingredient_name"
+            android:text="@{ingredient.name}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/circular_medium"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/ingredient_original"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ingredient_image"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="petite peas" />
+
+        <TextView
+            android:id="@+id/ingredient_original"
+            android:text="@{ingredient.original}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/circular_light"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@id/ingredient_name"
+            app:layout_constraintStart_toStartOf="@id/ingredient_name"
+            app:layout_constraintTop_toBottomOf="@id/ingredient_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="1 cup frozen peas" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

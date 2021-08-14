@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="result"
+            type="com.example.foodrecipes.models.Result" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/row_image"
+            loadRecipeImage="@{result.image}"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="W, 1:2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/ShapeableImageViewStyle" />
+
+        <TextView
+            android:id="@+id/row_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/circular_medium"
+            android:maxLines="2"
+            android:text="@{result.title}"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/row_image"
+            tools:text="This is the title" />
+
+        <TextView
+            android:id="@+id/row_sumary"
+            parseHtmlToString="@{result.summary}"
+            android:layout_marginTop="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/circular_light"
+            android:maxLines="2"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/row_title"
+            tools:text="This is the summary" />
+
+
+        <TextView
+            android:id="@+id/row_likes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/ic_heart_border"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/circular_light"
+            android:includeFontPadding="false"
+            android:text="@{String.valueOf(result.aggregateLikes)}"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/row_sumary"
+            app:layout_constraintTop_toBottomOf="@id/row_sumary"
+            tools:text="100" />
+
+        <TextView
+            android:id="@+id/row_time"
+            cookingTimeFormat="@{result.readyInMinutes}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/ic_time"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/circular_light"
+            android:includeFontPadding="false"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/row_likes"
+            app:layout_constraintTop_toBottomOf="@id/row_sumary"
+            tools:text="100" />
+
+        <TextView
+            android:id="@+id/row_serving"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/ic_serving"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/circular_light"
+            android:includeFontPadding="false"
+            android:text="@{String.valueOf(result.servings)}"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/row_time"
+            app:layout_constraintTop_toBottomOf="@id/row_sumary"
+            tools:text="100" />
+
+        <TextView
+            android:id="@+id/row_vegetarian"
+            nutritionVisibility="@{result.vegetarian}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/ic_eco"
+            android:drawablePadding="8dp"
+            app:layout_constraintEnd_toEndOf="@id/row_sumary"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/row_serving"
+            app:layout_constraintTop_toBottomOf="@id/row_sumary" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="result"
+            type="com.example.foodrecipes.models.Result" />
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        android:overScrollMode="never"
+        tools:context=".ui.fragments.detail.overview.OverviewFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/overview_image"
+                loadRecipeImage="@{result.image}"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintDimensionRatio="W, 1:1.8"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearance="@style/ShapeableImageViewStyle"
+                tools:src="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/overview_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/mrienda_one_regular"
+                android:text="@{result.title}"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/overview_image"
+                tools:text="This is the title" />
+
+            <TextView
+                android:id="@+id/overview_credit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/mrienda_one_regular"
+                android:text="@{result.creditsText}"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/overview_title"
+                tools:text="This is the credit" />
+
+
+            <TextView
+                android:id="@+id/overview_likes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:drawableStart="@drawable/ic_heart_border"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/colorTextSecondary"
+                android:fontFamily="@font/circular_light"
+                android:includeFontPadding="false"
+                android:text="@{String.valueOf(result.aggregateLikes)}"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/overview_credit"
+                app:layout_constraintTop_toBottomOf="@id/overview_credit"
+                tools:text="100" />
+
+            <TextView
+                android:id="@+id/overview_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:drawableStart="@drawable/ic_time"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/colorTextSecondary"
+                android:fontFamily="@font/circular_light"
+                android:includeFontPadding="false"
+                cookingTimeFormat="@{result.readyInMinutes}"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/overview_likes"
+                app:layout_constraintTop_toBottomOf="@id/overview_credit"
+                tools:text="45" />
+
+            <TextView
+                android:id="@+id/overview_serving"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:drawableStart="@drawable/ic_serving"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/colorTextSecondary"
+                android:fontFamily="@font/circular_light"
+                android:includeFontPadding="false"
+                android:text="@{String.valueOf(result.servings)}"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/overview_time"
+                app:layout_constraintTop_toBottomOf="@id/overview_credit"
+                tools:text="2" />
+
+            <LinearLayout
+                android:id="@+id/layout_nutrition"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="start"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@id/overview_credit"
+                app:layout_constraintStart_toStartOf="@id/overview_credit"
+                app:layout_constraintTop_toBottomOf="@id/overview_likes">
+
+                <TextView
+                    android:id="@+id/overview_vegetarian"
+                    nutritionVisibility="@{result.vegetarian}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:drawableStart="@drawable/ic_vegetarian"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="@color/colorTextSecondary"
+                    android:fontFamily="@font/circular_light"
+                    android:includeFontPadding="false"
+                    android:text="@string/vegetarian"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/overview_glutenFree"
+                    nutritionVisibility="@{result.glutenFree}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:drawableStart="@drawable/ic_gluten_free"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="@color/colorTextSecondary"
+                    android:fontFamily="@font/circular_light"
+                    android:includeFontPadding="false"
+                    android:text="@string/gluten_free"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/overview_dairyFree"
+                    nutritionVisibility="@{result.dairyFree}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_dairy_free"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="@color/colorTextSecondary"
+                    android:fontFamily="@font/circular_light"
+                    android:includeFontPadding="false"
+                    android:text="Dairy free"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/overview_source_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_url"
+                app:layout_constraintStart_toStartOf="@id/layout_nutrition"
+                app:layout_constraintTop_toBottomOf="@id/layout_nutrition"
+                app:tint="@color/colorTextSecondary" />
+
+            <TextView
+                android:id="@+id/overview_source_txt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:autoLink="web"
+                android:fontFamily="@font/circular_light"
+                android:text="@{result.sourceUrl}"
+                android:textColorLink="@color/colorTextLink"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/overview_credit"
+                app:layout_constraintStart_toEndOf="@id/overview_source_img"
+                app:layout_constraintTop_toBottomOf="@id/layout_nutrition"
+                tools:text="https://google.com.vn" />
+
+            <TextView
+                android:id="@+id/overview_summary"
+                parseHtmlToString="@{result.summary}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/circular_light"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/overview_credit"
+                app:layout_constraintStart_toStartOf="@id/overview_credit"
+                app:layout_constraintTop_toBottomOf="@id/overview_source_txt"
+                tools:text="This is the summary" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

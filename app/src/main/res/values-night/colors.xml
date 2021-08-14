@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#DEDEDE</color>
+    <color name="colorAcent">#37416E</color>
+    <color name="colorBackground">#1f1d2b</color>
+    <color name="colorTextPrimary">#ffffff</color>
+    <color name="colorTextSecondary">#808191</color>
+    <color name="colorTextLink">#CDCEEC</color>
+    <color name="colorSearchView">#252836</color>
+    <color name="colorMultipleSelectedBg">#80C5CFFD</color>
+    <color name="colorFilterBackground">#90252836</color>
+    <color name="colorStatusBar">#1f1d2b</color>
+    <color name="colorRipple">#b9bace</color>
+
+    <!-- Chip -->
+    <color name="colorChipBackground">#252836</color>
+    <color name="colorChipBackgroundSelected">#6c5ecf</color>
+    <color name="colorChipText">#808191</color>
+    <color name="colorChipTextSelected">#ffffff</color>
+
+
+    <!-- Bottom Navigation -->
+    <color name="colorBottomNavBacground">#252836</color>
+    <color name="colorBottomNavItem">#808191</color>
+    <color name="colorBottomNavItemSelected">#6c5ecf</color>
+</resources>

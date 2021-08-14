@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="4dp">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/meal_type_chipGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:chipSpacingVertical="12dp"
+            app:chipSpacingHorizontal="12dp"
+            app:checkedChip="@id/meal_type_all"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/meal_type_all"
+                android:text="@string/none"
+                style="@style/MyChipStyle"
+                app:chipStartPadding="8dp"
+                app:chipEndPadding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/main_course"
+                android:text="@string/chip_main_course"
+                style="@style/MyChipStyle"
+                app:chipStartPadding="8dp"
+                app:chipEndPadding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/side_dish"
+                android:text="@string/chip_side_dish"
+                style="@style/MyChipStyle"
+                app:chipStartPadding="8dp"
+                app:chipEndPadding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/dessert"
+                android:text="@string/chip_dessert"
+                style="@style/MyChipStyle"
+                app:chipStartPadding="8dp"
+                app:chipEndPadding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/appetizer"
+                android:text="@string/chip_appetizer"
+                style="@style/MyChipStyle"
+                app:chipStartPadding="8dp"
+                app:chipEndPadding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/salad"
+                android:text="@string/chip_salad"
+                style="@style/MyChipStyle"
+                app:chipStartPadding="8dp"
+                app:chipEndPadding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/bread"
+                android:text="@string/chip_bread"
+                style="@style/MyChipStyle"
+                app:chipStartPadding="8dp"
+                app:chipEndPadding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/breakfast"
+                android:text="@string/chip_breakfast"
+                style="@style/MyChipStyle"
+                app:chipStartPadding="8dp"
+                app:chipEndPadding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/soup"
+                android:text="@string/chip_soup"
+                style="@style/MyChipStyle"
+                app:chipStartPadding="8dp"
+                app:chipEndPadding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/beverage"
+                android:text="@string/chip_beverage"
+                style="@style/MyChipStyle"
+                app:chipStartPadding="8dp"
+                app:chipEndPadding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/sauce"
+                android:text="@string/chip_sauce"
+                style="@style/MyChipStyle"
+                app:chipStartPadding="8dp"
+                app:chipEndPadding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/marinade"
+                android:text="@string/chip_marinade"
+                style="@style/MyChipStyle"
+                app:chipStartPadding="8dp"
+                app:chipEndPadding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/fingerfood"
+                android:text="@string/chip_fingerfood"
+                style="@style/MyChipStyle"
+                app:chipStartPadding="8dp"
+                app:chipEndPadding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/snack"
+                android:text="@string/chip_snack"
+                style="@style/MyChipStyle"
+                app:chipStartPadding="8dp"
+                app:chipEndPadding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/drink"
+                android:text="@string/chip_drink"
+                style="@style/MyChipStyle"
+                app:chipStartPadding="8dp"
+                app:chipEndPadding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </LinearLayout>
+</layout>

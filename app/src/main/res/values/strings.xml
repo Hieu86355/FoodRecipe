@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Food Recipe</string>
+
+    <string name="mode">day</string>
+
+
+    <string name="menu_home">Home</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_favorite">Favorites</string>
+    <string name="menu_setting">Settings</string>
+    <string name="tab_title_all_recipe">All recipe</string>
+    <string name="tab_title_main">Main</string>
+    <string name="tab_title_dessert">Dessert</string>
+    <string name="tab_title_drink">Drink</string>
+    <string name="tab_title_breakfast">Breakfast</string>
+    <string name="tab_title_dinner">Dinner</string>
+    <string name="tab_title_salad">Salad</string>
+    <string name="lost_connection_snackbar">No internet connection!</string>
+    <string name="detail_toolbar_title">Details</string>
+    <string name="tab_title_overview">Overview</string>
+    <string name="tab_title_ingredient">Ingredients</string>
+    <string name="tab_title_instruction">Instructions</string>
+    <string name="vegetarian">Vegetarian</string>
+    <string name="gluten_free">Gluten free</string>
+    <string name="delete_all">Delete all</string>
+    <string name="chip_gluten_free">Gluten free</string>
+    <string name="chip_ketogenic">Ketogenic</string>
+    <string name="chip_vegetarian">Vegetarian</string>
+    <string name="chip_pescetarian">Pescetarian</string>
+    <string name="chip_paleo">Paleo</string>
+    <string name="chip_primal">Primal</string>
+    <string name="chip_whole_30">whole 30</string>
+    <string name="all">All</string>
+    <string name="none">None</string>
+    <string name="chip_main_course">Main course</string>
+    <string name="chip_side_dish">Side dish</string>
+    <string name="chip_dessert">Dessert</string>
+    <string name="chip_appetizer">Appetizer</string>
+    <string name="chip_salad">Salad</string>
+    <string name="chip_bread">Bread</string>
+    <string name="chip_breakfast">Breakfast</string>
+    <string name="chip_soup">Soup</string>
+    <string name="chip_beverage">Beverage</string>
+    <string name="chip_sauce">Sauce</string>
+    <string name="chip_marinade">Marinade</string>
+    <string name="chip_fingerfood">Finger food</string>
+    <string name="chip_snack">Snack</string>
+    <string name="chip_drink">Drink</string>
+    <string name="apply_button">Apply</string>
+</resources>
