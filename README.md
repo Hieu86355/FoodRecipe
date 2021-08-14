@@ -30,7 +30,6 @@ Personal project developed with the Android SDK. All recipe information is provi
 * [**Lottie**](https://github.com/airbnb/lottie-android)
 * [**Jsoup**](https://jsoup.org/)
 * [**Retrofit**](https://square.github.io/retrofit/)
-* Android Jetpack: Hilt, Navigation, Room, Data binding
 
 
 ## Screenshots:
